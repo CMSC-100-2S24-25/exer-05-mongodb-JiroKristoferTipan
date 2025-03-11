@@ -8,3 +8,6 @@ const router = (app) => {
     app.post('/remove-user', removeUser);
     app.post('/remove-all-user', removeAllUser);
 }
+
+
+export default router;
