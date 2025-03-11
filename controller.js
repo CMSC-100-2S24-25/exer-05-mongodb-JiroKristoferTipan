@@ -26,16 +26,33 @@ const saveStudent = (req,res) => {
 
 }
 
-const update = (req,res) => {
-
+const update = async (req,res) => {
+    let stud = await Student.findOne({ fname: "Tracy"});
+    stud.fname = req.query.fname;
+    stud.lname = "Parker";
+    await stud.save();
 }
 
-const removeUser = (req,res) => {
-
+const removeUser = async (req,res) => {
+    try {
+        await Student.deleteOne({stdnum: req.query.stdnum});
+        console.log({deleted: true});
+        res.send({deleted: true});
+    } catch (err){
+        console.log({deleted: false});
+        res.send({deleted: false});
+    }
 }
 
-const removeAllUser = (req,res) => {
-
+const removeAllUser = async (req,res) => {
+    try {
+        await Student.deleteMany({});
+        console.log({deleted: true});
+        res.send({deleted: true});
+    } catch (err){
+        console.log({deleted: false});
+        res.send({deleted: false});
+    }
 }
 
 export{user, members, saveStudent, update, removeUser, removeAllUser}
