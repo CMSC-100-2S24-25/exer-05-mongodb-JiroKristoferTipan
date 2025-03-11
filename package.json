@@ -1,0 +1,27 @@
+{
+  "name": "exer-05-mongodb-jirokristofertipan",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/PGZ3017l)",
+  "main": "request.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMSC-100-2S24-25/exer-05-mongodb-JiroKristoferTipan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CMSC-100-2S24-25/exer-05-mongodb-JiroKristoferTipan/issues"
+  },
+  "homepage": "https://github.com/CMSC-100-2S24-25/exer-05-mongodb-JiroKristoferTipan#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "needle": "^3.3.1"
+  }
+}
