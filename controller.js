@@ -22,8 +22,19 @@ const members = async (req,res) => {
 
 
 //post
-const saveStudent = (req,res) => {
-
+const saveStudent = async (req,res) => {
+    if (req.query.stdnum && req.query.fname && req.query.lname && req.query.age){
+        let newUser = {
+            stdnum: req.query.stdnum,
+            fname: req.query.fname,
+            lname: req.query.lname,
+            age: req.query.age
+        };
+        await newUser.save();
+        res.send ({intserted: true});
+    } else {
+        res.send ({intserted: false});
+    }
 }
 
 const update = async (req,res) => {
